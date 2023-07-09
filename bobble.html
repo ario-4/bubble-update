@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+          body {
+            background-color: rgb(0, 0, 33);
+            width: 100%;
+            height: 100vh;
+          }
+
+          @keyframes hobab4 {
+            50% {
+              transform: scale(0.2);
+            }
+            100% {
+              transform: translate(800px, -200px);
+            }
+          }
+          @keyframes hobab1 {
+            50% {
+              transform: translate(-200px, -110px);
+            }
+            100% {
+              transform: scale(0.2);
+            }
+          }
+
+          @keyframes hobab2 {
+            50% {
+              transform: translate(300px, -230px);
+            }
+            100% {
+              transform: translate(-700px, -230px);
+            }
+          }
+          @keyframes hobab3 {
+            50% {
+              transform: translate(-300px, 230px);
+            }
+            100% {
+              transform: translate(300px, 230px);
+            }
+          }
+
+          .hobab1 {
+            width: 200px;
+            height: 200px;
+
+            animation: 5s infinite alternate linear;
+            transform-origin: bottom;
+            position: absolute;
+            display: flex;
+            left: 300px;
+            top: 200px;
+          }
+
+          .line1 {
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            background-color: transparent;
+            display: flex;
+            position: absolute;
+            border-radius: 50%;
+          }
+          .item9 {
+            position: absolute;
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            border-left: 5px solid rgb(145, 255, 0);
+            left: 20px;
+            top: 10px;
+            filter: blur(14px);
+            transform: rotate(245deg);
+          }
+          .item8 {
+            position: absolute;
+            width: 9px;
+            height: 50px;
+            border-radius: 50%;
+            border-left: 4px solid white;
+            right: 30px;
+            top: 140px;
+            filter: blur(3px);
+            transform: rotate(225deg);
+          }
+          .item7 {
+            position: absolute;
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            border-left: 5px solid rgb(90 255 0 / 56%);
+            right: 0;
+            top: 20px;
+            filter: blur(7px);
+            transform: rotate(214deg);
+          }
+          .item6 {
+            position: absolute;
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border-left: 5px solid red;
+            right: 20px;
+            top: 60px;
+            filter: blur(10px);
+            transform: rotate(235deg);
+          }
+          .item10 {
+            position: absolute;
+            width: 130px;
+            height: 131px;
+            border-radius: 50%;
+            border-left: 8px solid red;
+            right: 30px;
+            top: 0px;
+            filter: blur(15px);
+            transform: rotate(410deg);
+          }
+          .item5 {
+            position: absolute;
+            width: 61px;
+            height: 123px;
+            border-radius: 50%;
+            border-left: 8px solid rgb(243, 237, 237);
+            right: 98px;
+            top: -10px;
+            filter: blur(3px);
+            transform: rotate(53deg);
+          }
+          .item1 {
+            width: 200px;
+            height: 200px;
+            background-color: rgba(23, 127, 238, 0);
+            border-radius: 50%;
+            margin: auto;
+            position: relative;
+            border-left: 1px solid rgba(255, 253, 253, 0.916);
+            transform: rotate(44deg);
+            box-shadow: inset 1px 0px 10px rgba(255, 255, 255, 0.288);
+            filter: blur(1px);
+          }
+          .item2 {
+            position: absolute;
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            border-left: 5px solid rgba(0, 98, 255, 0.492);
+            right: 20px;
+            top: 20px;
+            filter: blur(7px);
+            transform: rotate(20deg);
+          }
+          .item3 {
+            position: absolute;
+            width: 80px;
+            height: 120px;
+            border-radius: 50%;
+            border-left: 5px solid rgb(166, 255, 0);
+            right: 70px;
+            top: -15px;
+            filter: blur(8px);
+            transform: rotate(70deg);
+          }
+          .item4 {
+            position: absolute;
+            width: 10px;
+            height: 40px;
+            border-radius: 50%;
+            border-left: 5px solid rgb(255, 255, 255);
+            right: 100px;
+            top: -12px;
+            filter: blur(3px);
+
+            transform: rotate(85deg);
+          }
+          button {
+            cursor: pointer;
+            height: 30px;
+            border-radius: 5px;
+            font-family: Georgia, "Times New Roman", Times, serif;
+            border: none;
+          }
+          button:active {
+            transform: scale(0.9);
+          }
+        </style>
+      </head>
+      <body>
+        <button>creat bubble</button>
+      </body>
+    </html>
+    <script>
+      let body = document.querySelector("body");
+      let button = document.querySelector("button");
+      button.addEventListener("click", (e) => {
+        creator();
+      });
+      function creator() {
+        let newBubble = document.createElement("div");
+        newBubble.classList.add("hobab1");
+        body.appendChild(newBubble);
+
+        let line = document.createElement("div");
+        line.classList.add("line1");
+        newBubble.appendChild(line);
+
+        let item10 = document.createElement("div");
+        item10.classList.add("item10");
+        line.appendChild(item10);
+
+        let item9 = document.createElement("div");
+        item9.classList.add("item9");
+        line.appendChild(item9);
+
+        let item8 = document.createElement("div");
+        item8.classList.add("item8");
+        line.appendChild(item8);
+
+        let item7 = document.createElement("div");
+        item7.classList.add("item7");
+        line.appendChild(item7);
+
+        let item6 = document.createElement("div");
+        item6.classList.add("item6");
+        line.appendChild(item6);
+
+        let item5 = document.createElement("div");
+        item5.classList.add("item5");
+        line.appendChild(item5);
+
+        let item4 = document.createElement("div");
+        item4.classList.add("item4");
+        line.appendChild(item4);
+
+        let item3 = document.createElement("div");
+        item3.classList.add("item3");
+        line.appendChild(item3);
+
+        let item2 = document.createElement("div");
+        item2.classList.add("item2");
+        line.appendChild(item2);
+
+        let item1 = document.createElement("div");
+        item1.classList.add("item1");
+        line.appendChild(item1);
+
+        let pageX = window.outerWidth;
+        let x = Math.floor(Math.random() * (pageX - 300));
+        newBubble.style.left = `${x}px`;
+
+        let pageY = window.outerHeight;
+        let y = Math.floor(Math.random() * (pageY - 300));
+        newBubble.style.top = `${y}px`;
+
+        let randomScale = Math.floor(Math.random() * 10 + 2) / 10;
+        newBubble.style.transform = `scale(${randomScale})`;
+
+        let randomAnimate = Math.floor(Math.random() * 4) + 1;
+        newBubble.style.animation = `hobab${randomAnimate} 120s infinite alternate linear`;
+
+        if (randomAnimate == 1 && randomScale >= 0.5) {
+          line.style.filter = "blur(4px)";
+          newBubble.style.animation = `hobab${randomAnimate} 320s infinite alternate linear`;
+        }
+        if (randomAnimate == 4) {
+          line.style.filter = "blur(2px)";
+          newBubble.style.animation = `hobab${randomAnimate} 220s infinite alternate linear`;
+        }
+
+        console.log(randomAnimate);
+      }
+    </script>
+  </body>
+</html>
